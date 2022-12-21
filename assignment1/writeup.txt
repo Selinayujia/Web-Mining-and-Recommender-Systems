@@ -1,0 +1,11 @@
+Rating prediction
+Training with 199000 data, validating with 1000 data
+With the basic  model α + βuser + βitem, try to find the best lambda 10^-4.8 from pipeline. Also, if user bias or item bias not found, return ratingaverage + userBias or ratingaverage + itemBias. If both not found, return the rating average on all item
+
+Reading prediction
+Training with 199000 data, validating with 1000 data
+Fit the popularity model, with 71.8% 
+If the book is in popular set, predict read
+If the book is not in popular set, check the jaccard similarity 
+Jaccard similarity is computed by 0.62 * user similarity + 0.38 * item similarity( or just 0.62 * user similarity if item not seen before, same, just 0.38 * item similarity if user not seen before)
+If overall similarity more than 8/1000, predict read, else no
